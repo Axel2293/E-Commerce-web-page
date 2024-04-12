@@ -1,0 +1,62 @@
+.container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  min-width: 228px;
+  max-width: 228px;
+  height: 330px;
+}
+
+.card-footer {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+.filter-input {
+  flex: 1 1 250px;
+  margin-bottom: 10px;
+}
+
+.filter-input label {
+  display: block;
+}
+
+.filter-input input {
+  width: 100%;
+}
+
+.filter-bar button {
+  flex: 0 1 100%;
+}
+
+div#products {
+  border: 1px;
+  border-style: dashed;
+  width: 100%;
+  margin: 10px auto;
+}
+div#loader {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#product{
+  height: 550px;
+  width: fit-content;
+}

@@ -1,0 +1,33 @@
+#product-media{
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    border: solid grey 1px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.input-group{
+    margin-bottom: 3%;
+    width: 90%;
+}
+
+.input-group span#QP.input-group-text{
+    width: 40%;
+}
+
+.input-group span#CURR.input-group-text{
+    width: 20%;
+    text-align: center;
+}
+
+#p-img{
+    border-radius: 50%;
+    height: 100px;
+    width: 150px;
+    border: dotted black 1px;
+}
+
+.cart-bttns a{
+    width: 80%;
+    margin-bottom: 5px;
+}
