@@ -1,3 +1,6 @@
+var maxPages = 0;
+sessionStorage.setItem("currPage", "1");
+
 /* 
     Functions for the index page
 */
@@ -73,11 +76,19 @@ function setLoadingAnimation(divID) {
     }
 }
 
-async function showProducts(query) {
+async function showProducts(query, currPage) {
     //Get product data
     setLoadingAnimation("products");
-    let data = await getProducts(sessionStorage.getItem("exp"), query);
-    sessionStorage.setItem("productsData", data); //Store data of products
+    let data = sessionStorage.getItem("productsData");
+    if (data == null) {
+        data = await getProducts(sessionStorage.getItem("exp"), query);
+        sessionStorage.setItem("productsData", JSON.stringify(data)); //Store data of products
+    }else{
+        data = JSON.parse(data);
+    }
+
+    maxPages = Math.ceil(data.length / 4);
+
     
     console.log("PORDUCTS: ", data)
     let productsContainer = document.querySelector("#products")
@@ -119,6 +130,21 @@ function aplicarFiltros() {
     showProducts(query);
 }
 
+
+function goToPrevious() {
+    let currPage = sessionStorage.getItem("currPage");
+    if (currPage!=1) {
+        sessionStorage.setItem("currPage", currPage-1);
+        showProducts()
+    }
+}
+
+function gtoToNext() {
+    let currPage = sessionStorage.getItem("currPage");
+
+}
+
+
 function addToCartModal(prod_id) {
     console.log(prod_id)
     swal({
@@ -127,7 +153,7 @@ function addToCartModal(prod_id) {
             element: "input",
             attributes: {
               placeholder: "Quantity",
-              type: "text",
+              type: "number",
             },
         },
         buttons: {

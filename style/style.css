@@ -5,8 +5,7 @@
 }
 
 .card-img-top {
-  min-width: 228px;
-  max-width: 228px;
+  width: min-content;
   height: 330px;
 }
 
@@ -56,7 +55,15 @@ div#loader {
   align-items: center;
 }
 
-div#product{
+div.card-product{
   height: 550px;
+  width: 250px;
+  margin: 1%;
+}
+
+p.card-price{
   width: fit-content;
+  background-color: rgb(74, 255, 128);
+  border: 5px;
+  border-radius: 10px;
 }
