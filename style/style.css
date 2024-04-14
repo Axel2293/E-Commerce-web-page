@@ -56,7 +56,7 @@ div#loader {
 }
 
 div.card-product{
-  height: 550px;
+  height: 1% !important;
   width: 250px;
   margin: 1%;
 }

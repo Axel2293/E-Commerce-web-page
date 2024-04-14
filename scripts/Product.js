@@ -32,5 +32,5 @@ function prodToHTML(product) {
         description: product["description"],
         uuid: product["uuid"],
         pricePerUnit: product["pricePerUnit"]
-    }); ;
+    });
 }
