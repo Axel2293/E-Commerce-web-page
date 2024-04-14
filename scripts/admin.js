@@ -40,19 +40,6 @@ function prodToHTML(product) {
         uuid: product["uuid"]
     });
 }
-
-function setLoadingAnimation(divID) {
-    if (divID) {
-        let div = document.getElementById(`${divID}`);
-        let anim = `
-            <div class="loader" id ="loader">
-                <h4>Cargando... </h4>
-                <img src="../images/loading.gif" alt="loading" style="widtd: 40px; height: auto;">
-            </div>
-        `
-        div.innerHTML = anim;
-    }
-}
 /* 
     Recieves exp and search query object
         - Saves product data on Session Storage
@@ -279,6 +266,7 @@ async function addProduct(){
                 title:"Product created correctly",
                 icon:"success"
             })
+            loadProducts(undefined, true);
         }
     })
 }

@@ -4,7 +4,7 @@ const host = "https://products-dasw.onrender.com";
 const cartEP = "/api/cart";
 
 /* LOGIN FUNCTION */
-function logIn(form) {
+function logIn() {
     let email = document.getElementById('log-email').value;
     sessionStorage.setItem("user", email);
     swal({
